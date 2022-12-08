@@ -2,64 +2,64 @@
 
 int main(int argc, char* argv[])
 {
-	//ÆÄÀÏ º¯¼ö »ı¼º 
+	//íŒŒì¼ ë³€ìˆ˜ ìƒì„± 
 	FILE* file;
 	
-	//ÆÄÀÏ¿¡ ´ëÇØ ¾î¶² µ¿ÀÛÀ» ÇÒÁö ¿©ºÎ ÇÒ´ç
+	//íŒŒì¼ì— ëŒ€í•´ ì–´ë–¤ ë™ì‘ì„ í• ì§€ ì—¬ë¶€ í• ë‹¹
 	file = fopen("test.txt", "w");
-	//  ÆÄÀÏ °æ·Î ^           ^ µ¿ÀÛ ¹æ¹ı 
-	//r : read; ÀĞ±â 
-	//w : write; ¾²±â 
-	//a : append; Ãß°¡ 
-	//´õ ÀÖ´Âµ¥ ±ÍÂúÀ¸´Ï±î ÀÌ°Å¸¸ ¾Æ¼À 
+	//   íŒŒì¼ ê²½ë¡œ ^           ^ ë™ì‘ ë°©ë²• 
+	//r : read; ì½ê¸° 
+	//w : write; ì“°ê¸° 
+	//a : append; ì¶”ê°€ 
+	//ë” ìˆëŠ”ë° ê·€ì°®ìœ¼ë‹ˆê¹Œ ì´ê±°ë§Œ ì•„ì…ˆ 
 	
-	//w, a´Â ÇØ´ç °æ·Î¿¡ ÆÄÀÏÀÌ ¾øÀ¸¸é »õ·Î »ı¼º
-	//rÀº ÇØ´ç °æ·Î¿¡ ÆÄÀÏÀÌ ¾øÀ¸¸é null ¹İÈ¯ 
+	//w, aëŠ” í•´ë‹¹ ê²½ë¡œì— íŒŒì¼ì´ ì—†ìœ¼ë©´ ìƒˆë¡œ ìƒì„±
+	//rì€ í•´ë‹¹ ê²½ë¡œì— íŒŒì¼ì´ ì—†ìœ¼ë©´ null ë°˜í™˜ 
 	
-	//ÆÄÀÏ ÀÌ¸§ÀÌ ¾Æ´Ï°í ¹İµå½Ã °æ·Î·Î ½á¾ß µÊ!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	//íŒŒì¼ ì´ë¦„ì´ ì•„ë‹ˆê³  ë°˜ë“œì‹œ ê²½ë¡œë¡œ ì¨ì•¼ ë¨!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 	/*
-		C:\User\asdf\test.txt ÀÌ°í User¿¡ exe ÇÁ·Î±×·¥ÀÌ ÀÖ´Â  °æ¿ì 
+		C:\User\asdf\test.txt ì´ê³  Userì— exe í”„ë¡œê·¸ë¨ì´ ìˆëŠ”  ê²½ìš° 
 		
 		"test.txt" 			X
 		"asdf\\test.txt" 	O
 		
-		ÂüÁ¶ÇÏ´Â ÆÄÀÏÀÌ °°Àº À§Ä¡¿¡ ÀÖ´Â °æ¿ì ÆÄÀÏ ÀÌ¸§¸¸ ½áµµ µÊ 
+		ì°¸ì¡°í•˜ëŠ” íŒŒì¼ì´ ê°™ì€ ìœ„ì¹˜ì— ìˆëŠ” ê²½ìš° íŒŒì¼ ì´ë¦„ë§Œ ì¨ë„ ë¨ 
 	*/
 	 
 	
-	//ÀÔ·Â ¹Ş±â 
+	//ì…ë ¥ ë°›ê¸° 
 	char input[100];
-	printf("ÀÔ·Â : "); 
+	printf("ì…ë ¥ : "); 
 	scanf("%s", input);
 	
-	//ÅØ½ºÆ® Ãß°¡ 
-	fputc('a', file);                   //fputc : File PUT Character; Ä³¸¯ÅÍ ¹®ÀÚ Ãß°¡ 
-	fputs("\nasdf", file);	//fputs : File PUT String; ¹®ÀÚ¿­ Ãß°¡ 
-	fprintf(file, "\n%s", input);       //fprintf : printf¶û ¶È°°À½ 
+	//í…ìŠ¤íŠ¸ ì¶”ê°€ 
+	fputc('a', file);                   //fputc : File PUT Character; ìºë¦­í„° ë¬¸ì ì¶”ê°€ 
+	fputs("\nasdf", file);	//fputs : File PUT String; ë¬¸ìì—´ ì¶”ê°€ 
+	fprintf(file, "\n%s", input);       //fprintf : printfë‘ ë˜‘ê°™ìŒ 
 	
-	//ÆÄÀÏ ´İ±â
-	//¾È ´İÀ¸¸é ÆÄÀÏÀÇ Ä¿¼­°¡ ³¡¿¡ °¡ ÀÖ¾î¼­ Á¦´ë·Î ÀĞÀ» ¼ö ¾øÀ½ 
+	//íŒŒì¼ ë‹«ê¸°
+	//ì•ˆ ë‹«ìœ¼ë©´ íŒŒì¼ì˜ ì»¤ì„œê°€ ëì— ê°€ ìˆì–´ì„œ ì œëŒ€ë¡œ ì½ì„ ìˆ˜ ì—†ìŒ 
 	fclose(file);
 	
-	//ÀĞ±â·Î ´Ù½Ã ¿­±â 
+	//ì½ê¸°ë¡œ ë‹¤ì‹œ ì—´ê¸° 
 	file = fopen("test.txt", "r");
 	
-	//Ãâ·Â ¹®ÀÚ ÀÔ·Â ¹Ş±â
+	//ì¶œë ¥ ë¬¸ì ì…ë ¥ ë°›ê¸°
 	char output[100];
-	fread(output, 1, 100, file);		//ÆÄÀÏ ÀüÃ¼ ÀĞ±â 
+	fread(output, 1, 100, file);		//íŒŒì¼ ì „ì²´ ì½ê¸° 
 	
 	printf("\n%s", output); 
 	
 	fclose(file);
 	file = fopen("test.txt", "r");
 	
-	char charoutput = fgetc(file); 		//fgetc : File GET Character; Ä³¸¯ÅÍ ¹®ÀÚ ÀĞ±â
-	fgetc(file);	//ÁÙ¹Ù²Ş ¹®ÀÚ \n ÀĞ¾î¼­ ÁÙ ¹Ù²Ù±â
+	char charoutput = fgetc(file); 		//fgetc : File GET Character; ìºë¦­í„° ë¬¸ì ì½ê¸°
+	fgetc(file);	//ì¤„ë°”ê¿ˆ ë¬¸ì \n ì½ì–´ì„œ ì¤„ ë°”ê¾¸ê¸°
 	
-	//feof : File End Of File; ÆÄÀÏÀÇ ¸¶Áö¸· È®ÀÎ
-	//¸¶Áö¸·ÀÌ¸é true¸¦ ¹İÈ¯
+	//feof : File End Of File; íŒŒì¼ì˜ ë§ˆì§€ë§‰ í™•ì¸
+	//ë§ˆì§€ë§‰ì´ë©´ trueë¥¼ ë°˜í™˜
 	while (!feof(file)){
-		fgets(output, 100, file); 		//fgets : File GET String; ¹®ÀÚ¿­ ÀĞ±â 
+		fgets(output, 100, file); 		//fgets : File GET String; ë¬¸ìì—´ ì½ê¸° 
 		printf("\n%s", output);
 	} 
 	
