@@ -20,7 +20,7 @@ int main(int argc, char* argv[])
 	/*
 		C:\User\asdf\test.txt 이고 User에 exe 프로그램이 있는  경우 
 		
-		"test.txt" 			X
+		"test.txt" 		X
 		"asdf\\test.txt" 	O
 		
 		참조하는 파일이 같은 위치에 있는 경우 파일 이름만 써도 됨 
@@ -33,9 +33,9 @@ int main(int argc, char* argv[])
 	scanf("%s", input);
 	
 	//텍스트 추가 
-	fputc('a', file);                   //fputc : File PUT Character; 캐릭터 문자 추가 
-	fputs("\nasdf", file);	//fputs : File PUT String; 문자열 추가 
-	fprintf(file, "\n%s", input);       //fprintf : printf랑 똑같음 
+	fputc('a', file);		//fputc : File PUT Character; 캐릭터 문자 추가 
+	fputs("\nasdf", file);		//fputs : File PUT String; 문자열 추가 
+	fprintf(file, "\n%s", input);	//fprintf : printf랑 똑같음 
 	
 	//파일 닫기
 	//안 닫으면 파일의 커서가 끝에 가 있어서 제대로 읽을 수 없음 
@@ -59,7 +59,7 @@ int main(int argc, char* argv[])
 	//feof : File End Of File; 파일의 마지막 확인
 	//마지막이면 true를 반환
 	while (!feof(file)){
-		fgets(output, 100, file); 		//fgets : File GET String; 문자열 읽기 
+		fgets(output, 100, file);	//fgets : File GET String; 문자열 읽기 
 		printf("\n%s", output);
 	} 
 	
