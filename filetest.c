@@ -38,7 +38,8 @@ int main(int argc, char* argv[])
 	fprintf(file, "\n%s", input);	//fprintf : printf랑 똑같음 
 	
 	//파일 닫기
-	//안 닫으면 파일의 커서가 끝에 가 있어서 제대로 읽을 수 없음 
+	//안 닫으면 실행 중 계속 점유하고 있어서 다른 프로세스에서 접근이 불가능해짐
+	//메모리 누수될 수도 있음
 	fclose(file);
 	
 	//읽기로 다시 열기 
