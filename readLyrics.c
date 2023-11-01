@@ -1,14 +1,13 @@
 #include <stdio.h>
 
-//¾ËÆÄºª °³¼ö¸¸Å­ ¹è¿­ »ı¼º  
-static int alphabets[26];
-//±× ¿Ü ±âÅ¸ ¹®ÀÚ 
-static int anotherCharacter;
-//±×³É ¼±¾ğÇÏ¸é ÇÒ´çÀÌ ¾È µÇ¾î¼­ static ºÙ¿©ÁÜ 
+//ì•ŒíŒŒë²³ ê°œìˆ˜ë§Œí¼ ë°°ì—´ ìƒì„±
+int alphabets[26] = { 0, };
+//ê·¸ ì™¸ ê¸°íƒ€ ë¬¸ì 
+int anotherCharacter = 0;
 
 int main(int argc, char* argv[]){
 	
-	//³»°¡ ÁÁ¾ÆÇÏ´Â ³ë·¡ÀÓ ¤¾¤¾ 
+	//ë‚´ê°€ ì¢‹ì•„í•˜ëŠ” ë…¸ë˜ì„ ã…ã… 
 	FILE* lyrics = fopen("You're Just Like Pop Music.txt", "r");
 	
 	while (!feof(lyrics)){
